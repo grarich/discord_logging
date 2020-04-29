@@ -24,12 +24,12 @@ class Discord_Handler(Handler):
             headers["Content-type"] = "application/x-www-form-urlencoded"
             #can't do anything with the result
             if len(msg) > 1900:
-              msg_list = [msg[i: i+1900] for i in range(0, len(msg), 1900)]
-              for i in msg_list:
-                async with aiohttp.request("POST", url, data={'content':f"```{i}```"}, headers=headers):
-                    pass
+			    msg_list = [msg[i: i+1900] for i in range(0, len(msg), 1900)]
+                for i in msg_list:
+              	    async with aiohttp.request("POST", url, data={'content':f"```{i}```"}, headers=headers):
+                        pass
             else:
-              async with aiohttp.request("POST", url, data={'content':f"```{msg}```"}, headers=headers):
+                async with aiohttp.request("POST", url, data={'content':f"```{msg}```"}, headers=headers):
                     pass
         except Exception:
             self.handleError(record)
