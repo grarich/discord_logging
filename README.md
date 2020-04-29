@@ -1,4 +1,4 @@
-#discord_logging
+# discord_logging
 
 discord_logging is a logging extension module.  
 By using this module, logs can be sent by webhook.  
@@ -39,6 +39,5 @@ async def on_message(message):
     if message.content == '/hello':
         await message.channel.send('hello')
 
-#BOTの起動
 client.run('THi5IsDuMMyaCCesSTOK3nQ4.Cl2FMQ.ThIsi5DUMMyAcc3s5ToKen7kKWs')
 ```
