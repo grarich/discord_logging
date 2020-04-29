@@ -10,26 +10,35 @@ Install and update using pip:
 
 A simple example.  
 ```python
-import asyncio
+
+import discord
+
 import logging
 import discord_logging
 
-WEBHOOK_URL = "Your webhook url"
 logger = logging.getLogger()
+
+WEBHOOK_URL = "Your webhook url"
 handler = discord_logging.Discord_Handler(WEBHOOK_URL)
+
 logger.addHandler(handler)
 
-loop = asyncio.get_event_loop()
+client = discord.Client()
 
-async def main():
-    logging.info('info')
-    logging.debug('debug')
-    logging.error('error')
-    logging.warning('warning')
-    logging.critical('critical')
-    print("hello world!")
 
-if __name__ == "__main__":
-    loop.create_task(main())
-    loop.run_forever()
+@client.event
+async def on_ready():
+    print('login！(\'◇\')ゞ')
+
+
+@client.event
+async def on_message(message):
+    
+    if message.author.bot:
+        return
+    if message.content == '/hello':
+        await message.channel.send('hello')
+
+#BOTの起動
+client.run('THi5IsDuMMyaCCesSTOK3nQ4.Cl2FMQ.ThIsi5DUMMyAcc3s5ToKen7kKWs')
 ```
