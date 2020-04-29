@@ -3,7 +3,7 @@ import asyncio
 import logging
 from logging import Handler
 
-class Discrd_Handler(Handler):
+class Discord_Handler(Handler):
 
     def __init__(self, url):
         logging.Handler.__init__(self)
