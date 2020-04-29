@@ -11,7 +11,7 @@ setuptools.setup(
     description="Transfer logs acquired by logging module to discord with webhook!",  
     long_description=long_description,  
     long_description_content_type="text/markdown",  
-    url="https://github.com/grarich123/aiohandler",  
+    url="https://github.com/grarich123/discord_logging",  
     packages=setuptools.find_packages(),  
     classifiers=[  
         "Programming Language :: Python :: 3.8",  
