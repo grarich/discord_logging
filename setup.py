@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(  
     name="discord_logging",  
-    version="0.1.0",  
+    version="0.1.1",  
     author="grarich",  
     author_email="grarich123+github@gmail.com",  
     description="Transfer logs acquired by logging module to discord with webhook!",  
