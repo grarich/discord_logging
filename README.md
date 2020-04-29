@@ -16,7 +16,7 @@ import discord_logging
 
 WEBHOOK_URL = "Your webhook url"
 logger = logging.getLogger()
-handler = discord_logging.Discrd_Handler(WEBHOOK_URL)
+handler = discord_logging.Discord_Handler(WEBHOOK_URL)
 logger.addHandler(handler)
 
 loop = asyncio.get_event_loop()
